@@ -7,7 +7,7 @@ import './countryinfo.scss'
 function CountryInfo(){
 
     const [CountryDetails, setState] = useState([]);
-    const [CountryId,SetCountryId]=useState(0)
+    // const [CountryId,SetCountryId]=useState(0)
     const {country} = useParams();
 
         var Country = country.replace(/-/g, " ");  
@@ -38,7 +38,7 @@ function CountryInfo(){
                 console.log(err)
             })
         
-    }, [CountryId])
+    },[])
 
     return(
         <div className='CountryInfo container'>
