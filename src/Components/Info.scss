@@ -4,3 +4,12 @@
     margin-bottom: 250px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 425px) {
+.tableHeading{
+    margin-left: 60px !important;
+    width: 150vw;
+
+}
+
+}

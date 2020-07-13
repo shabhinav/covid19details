@@ -33,21 +33,25 @@ class Info extends Component{
     render() {
         return (
             <div className='Info container'>
-                <h1 style={{textDecoration:'underline',paddingBottom:'50px'}}>COVID19 Cases All Over The World</h1>
+                <div className='tableHeading'>                
+                    <h1 style={{textDecoration:'underline',paddingBottom:'50px',fontSize:'2rem'}}>COVID19 Cases All Over The World</h1>
+                </div>
                 <table className='table table-hover table-bordered'>
                     <thead>
-                        <th>Sno.</th>
-                        <th scope='col'>Countries</th>
-                        <th scope='col'>Total Cases</th>
-                        <th scope='col'>New Cases</th>
-                        <th scope='col'>Total Death</th>
-                        <th scope='col'>New Death</th>
-                        <th scope='col'>Total Recovered</th>
-                        <th scope='col'>New Recovered</th>
+                        <tr>                        
+                            <th>Sno.</th>
+                            <th scope='col'>Countries</th>
+                            <th scope='col'>Total Cases</th>
+                            <th scope='col'>New Cases</th>
+                            <th scope='col'>Total Death</th>
+                            <th scope='col'>New Death</th>
+                            <th scope='col'>Total Recovered</th>
+                            <th scope='col'>New Recovered</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {this.state.virusDetails.map((str,index)=>
-                        <tr>
+                        <tr key={Math.random()}>
                             <td>{index+1}</td>
                             <td><Router><NavLink to={str.Country.replace(/\s/g, "-").toLowerCase() } onClick={()=>this.props.history.push(str.Country)}>{str.Country}</NavLink></Router></td>
                             <td >{str.TotalConfirmed}</td>

@@ -25,18 +25,16 @@ class Main extends Component{
 
     render() {
         return (
-            <div>
-            <div className='Main container'>
-                    <div>
-                        <p >Coronavirus Cases</p>
-                        <p style={{fontWeight:'800',color:'#aaa'}}>{this.state.virusData.TotalConfirmed}</p>
-                        <p >Deaths</p>
-                        <p style={{fontWeight:'800',color:'#aaa'}}>{this.state.virusData.TotalDeaths}</p>
-                        <p >Recovered</p>
-                        <p style={{fontWeight:'800',color:'#8ACA2B'}}>{this.state.virusData.TotalRecovered}</p>
-                    </div>
-            </div>
-            <Info/>
+            <div style={{width:'100vw'}}>
+                <div className='Main container'>
+                    <p >Coronavirus Cases</p>
+                    <p style={{fontWeight:'800',color:'#aaa'}}>{this.state.virusData.TotalConfirmed}</p>
+                    <p >Deaths</p>
+                    <p style={{fontWeight:'800',color:'#aaa'}}>{this.state.virusData.TotalDeaths}</p>
+                    <p >Recovered</p>
+                    <p style={{fontWeight:'800',color:'#8ACA2B'}}>{this.state.virusData.TotalRecovered}</p>
+                </div>
+                <Info/>
             </div>
         )
     }
